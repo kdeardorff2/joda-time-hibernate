@@ -434,16 +434,6 @@
     </plugins>
   </reporting>
 
-  <!-- ==================================================================== -->
-
-  <distributionManagement>
-    <snapshotRepository>
-      <id>nexus-snapshots</id>
-      <url>http://localhost:8081/repository/maven-snapshots/</url>
-    </snapshotRepository>
-  </distributionManagement>
-
-  <!-- ==================================================================== -->
   <profiles>
     <profile>
       <id>repo-sign-artifacts</id>
@@ -552,4 +542,26 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
   </properties>
+
+
+  <!-- ==================================================================== -->
+
+  <distributionManagement>
+    <repository>
+      <id>nexus-releases</id>
+      <url>http://localhost:8081/repository/maven-releases/</url>
+    </repository>
+
+    <snapshotRepository>
+      <id>nexus-snapshots</id>
+      <url>http://localhost:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
+
+  <!-- ==================================================================== -->
+
+
+
+
+
 </project>
